@@ -65,7 +65,7 @@ const Navbar = () => {
     <div className="font-code w-full sticky top-0 py-4 bg-backgroundSecondary text-white z-50">
       {/* Top Bar */}
       <div className="flex justify-between items-center px-4 md:px-8">
-        <h3 className="text-xl font-bold">Hashim</h3>
+        <h3 className={`text-xl font-bold z-50 inline-block ${isOpen ? "text-black" : "text-white"} transform duration-500`}>Hashim</h3>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 items-center">
@@ -83,7 +83,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button onClick={toggleMenu} className="md:hidden">
+        <button onClick={toggleMenu} className={`md:hidden z-50 ${isOpen ? "text-black" : "text-white"} transform duration-500`}>
           {isOpen ? (
             <RxCross2 className="text-3xl font-bold" />
           ) : (
@@ -92,25 +92,25 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Nav Dropdown */}
+      {/* Mobile Nav Dropdown with Slide Animation */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen
-            ? "opacity-100 h-screen flex flex-col gap-16 items-start px-4 mt-20 text-5xl"
-            : "opacity-0 h-0"
+        className={`fixed top-0 left-0 w-full h-screen bg-gray-100 text-black z-40 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {navItems.map((item) => (
-          <div
-            key={item.id}
-            className={`${
-              item.active ? "opacity-100" : "opacity-50"
-            } flex`}
-          >
-            <h4 className="text-customPurple">#</h4>
-            <h4>{item.title}</h4>
-          </div>
-        ))}
+        <div className="flex flex-col gap-16 mt-32 ml-6 text-5xl">
+          {navItems.map((item) => (
+            <div
+              key={item.id}
+              className={`${
+                item.active ? "opacity-100" : "opacity-50"
+              } flex`}
+            >
+              <h4 className="text-customPurple">#</h4>
+              <h4>{item.title}</h4>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
