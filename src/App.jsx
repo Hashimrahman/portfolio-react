@@ -10,12 +10,13 @@ import { IoLogoFigma } from "react-icons/io5";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
+import MobileNav from "./Components/Navbar/MobileNav";
 
 function App() {
   return (
     <>
       <div className="bg-backgroundPrimary font-code">
-        <div className="fixed top-0 left-4 hidden md:flex flex-col justify-center items-center ">
+        {/* <div className="fixed top-0 left-4 hidden md:flex flex-col justify-center items-center ">
           <div className="w-[0.5px] h-32 bg-white mb-1"></div>
           <Link to="" target="_blank">
             <FaGithub className="text-2xl mb-2 text-white hover:text-customPurple"/>
@@ -26,12 +27,13 @@ function App() {
           <Link to="" target="_blank">
             <MdOutlineAlternateEmail className="text-2xl mb-2 text-white hover:text-customPurple"/>
           </Link>
-        </div>
+        </div> */}
         <div className="md:mx-36">
           <Navbar />
           <Hero />
           <Projects />
           <Skills />
+          {/* <MobileNav /> */}
         </div>
       </div>
     </>
