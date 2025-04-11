@@ -74,7 +74,7 @@ const Navbar = () => {
               key={item.id}
               className={`${
                 item.active ? "opacity-100" : "opacity-50"
-              } flex text-lg`}
+              } flex text-lg hover:opacity-100 hover:cursor-grab`}
             >
               <h4 className="text-customPurple">#</h4>
               <h4>{item.title}</h4>

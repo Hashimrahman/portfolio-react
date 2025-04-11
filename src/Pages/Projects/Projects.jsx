@@ -65,26 +65,29 @@ import React from "react";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import projectImage from "../../assets/project.jpg";
+import Aidnet from "../../assets/projects/aidnet.png"
+import SoleStyle from "../../assets/projects/solestyle.png"
+import DigiClock from "../../assets/projects/digi-clock.png"
 import { TbArrowsDoubleSwNe } from "react-icons/tb";
 
 const projects = [
   {
-    title: "Chat App",
-    description: "Minecraft servers hosting",
-    technologies: "HTML CSS Python Flask",
-    image: projectImage,
+    title: "Aidnet",
+    description: "Disaster Relief Management System",
+    technologies: "DRF Microservice TS ReactQuery",
+    image: Aidnet,
   },
   {
-    title: "Chat App",
-    description: "Minecraft servers hosting",
-    technologies: "HTML CSS Python Flask",
-    image: projectImage,
+    title: "SoleStyle",
+    description: "Fashion Product Showcase",
+    technologies: "React TailwindCSS Python Django",
+    image: SoleStyle,
   },
   {
-    title: "Chat App",
-    description: "Minecraft servers hosting",
-    technologies: "HTML CSS Python Flask",
-    image: projectImage,
+    title: "Digital Clock",
+    description: "A Digital Clock",
+    technologies: "React TailwindCSS ",
+    image: DigiClock,
   },
 ];
 
@@ -111,8 +114,8 @@ const Projects = () => {
             <div className="p-4 border-t-[1px] flex flex-col gap-3 items-start">
               <h1 className="text-white text-2xl">{project.title}</h1>
               <p className="text-customGray">{project.description}</p>
-              <button className="flex items-center text-white gap-2 border border-customPurple py-3 px-6">
-                Live <TbArrowsDoubleSwNe className="text-xl" />
+              <button className="flex items-center text-white gap-2 border border-customPurple py-3 px-6 hover:bg-customPurple">
+                Code <TbArrowsDoubleSwNe className="text-xl" />
               </button>
             </div>
           </div>
